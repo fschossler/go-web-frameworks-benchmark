@@ -1,0 +1,14 @@
+version: '3'
+services:
+  gin:
+    build:
+      context: ./gin  # Use the current directory as the build context
+      dockerfile: ./Dockerfile  # Path to your Dockerfile
+    ports:
+      - "8080:8080"  # Expose your API on port 8080
+
+  k6:
+    image: grafana/k6
+    volumes:
+      - ./k6:/tests  # Mount your k6 test scripts directory
+    command: run /tests/load-test.js  # Adjust the path to your k6 test script
