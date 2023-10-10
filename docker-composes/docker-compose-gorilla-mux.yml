@@ -3,7 +3,7 @@ services:
   api:
     container_name: api 
     build:
-      context: ../gorillamux  # Use the current directory as the build context
+      context: ../gorilla-mux  # Use the current directory as the build context
       dockerfile: ./Dockerfile  # Path to your Dockerfile
     deploy:
       resources:

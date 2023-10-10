@@ -15,9 +15,9 @@ fi
 if [ "$FRAMEWORK" = "gin" ]; then
     cd docker-composes && docker-compose -f "$DOCKER_COMPOSE" up --build --force-recreate -V
 fi
-if [ "$FRAMEWORK" = "gorillamux" ]; then
+if [ "$FRAMEWORK" = "gorilla-mux" ]; then
     cd docker-composes && docker-compose -f "$DOCKER_COMPOSE" up --build --force-recreate -V
 fi
-if [ "$FRAMEWORK" = "nethttp" ]; then
+if [ "$FRAMEWORK" = "net-http" ]; then
     cd docker-composes && docker-compose -f "$DOCKER_COMPOSE" up --build --force-recreate -V
 fi
