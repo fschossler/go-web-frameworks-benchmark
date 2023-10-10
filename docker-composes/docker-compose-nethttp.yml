@@ -1,9 +1,9 @@
 version: '3'
 services:
   api:
-    container_name: api
+    container_name: api 
     build:
-      context: ../gin  # Use the current directory as the build context
+      context: ../nethttp  # Use the current directory as the build context
       dockerfile: ./Dockerfile  # Path to your Dockerfile
     deploy:
       resources:
